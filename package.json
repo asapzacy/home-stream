@@ -1,5 +1,5 @@
 {
-  "name": "real-estate",
+  "name": "home-stream",
   "description": "",
   "version": "0.1.0",
   "private": true,
@@ -15,15 +15,16 @@
     "react-scripts": "0.8.5"
   },
   "dependencies": {
+    "axios": "^0.15.3",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zacarellano/real-estate.git"
+    "url": "git+https://github.com/zacarellano/home-stream.git"
   },
   "bugs": {
-    "url": "https://github.com/zacarellano/real-estate/issues"
+    "url": "https://github.com/zacarellano/home-stream/issues"
   },
-  "homepage": "https://zacarellano.github.io/real-estate"
+  "homepage": "https://zacarellano.github.io/home-stream"
 }
