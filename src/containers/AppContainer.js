@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Header from '../components/Header'
-import { getStream } from '../helpers/api.js'
+import { getHomeStream } from '../helpers/api.js'
 import '../styles/main.css'
 
 class AppContainer extends Component {
@@ -11,7 +11,17 @@ class AppContainer extends Component {
     }
   }
   componentDidMount() {
-    this.setState({ data: getStream() })
+    this.makeRequest()
+  }
+  makeRequest() {
+    getHomeStream()
+      .then((data) => {
+        console.log(data)
+        this.setState({
+          data
+        })
+      })
+      .catch((error) => console.log(error))
   }
   render() {
     return (
