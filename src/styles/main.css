@@ -10,9 +10,7 @@
 /* -------  header container  ------- */
 .headerContainer {
   width:100%;
-  flex-basis:25%;
   display:flex;
-  align-items:center;
   justify-content:center;
 }
 /* -------  header  ------- */
@@ -123,14 +121,27 @@
 }
 
 .mlsContainer {
+  width:90%;
+  margin:0 auto;
+  line-height:1;
   display:flex;
-  font-size:80%;
+  justify-content:space-between;
+  align-items:center;
 }
-.mlsDivider {
+.mlsData {
+  font-size:0.8em;
+}
+.bullet {
   margin:0 1em;
 }
 
-
+.saveBtn {
+  font-size:1em;
+  line-height:1;
+}
+.saveIcon {
+  padding:1% 2%;
+}
 
 
 

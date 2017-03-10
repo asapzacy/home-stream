@@ -1,10 +1,10 @@
 import React from 'react'
-import Home from './Home'
+import HomeContainer from '../containers/HomeContainer'
 
 export default function Stream({ listings }) {
   return (
     <ul className='homesList'>
-      { listings.map(item => <Home {...item} key={item.openHouseId} /> ) }
+      { listings.map(item => <HomeContainer {...item} key={item.openHouseId} /> ) }
     </ul>
   )
 }

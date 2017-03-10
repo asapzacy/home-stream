@@ -1,6 +1,6 @@
 
-export const getImageProps = (data) => ({
-  image: Math.round(Math.random()) ? data.photos[0] : data.photos[1],
+export const getImageProps = (data, random) => ({
+  image: data.photos[random],
   caption: `${data.mls.area} — ${data.address.city}, ${data.address.state}`,
   address: data.address.full
 })
@@ -16,10 +16,7 @@ export const getPriceProps = (data) => ({
 
 export const getDetailsProps = (data) => ({
   rooms: data.property.bedrooms,
-  baths: [
-    data.property.bathsHalf,
-    data.property.bathsFull
-  ],
+  baths: `${data.property.bathsHalf}/${data.property.bathsFull}`,
   stories: data.property.stories,
   area: data.property.area.toLocaleString(),
   year: data.property.yearBuilt
