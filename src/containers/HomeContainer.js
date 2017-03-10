@@ -22,7 +22,7 @@ class HomeContainer extends Component {
     this.setState({ photo: Math.round(Math.random()) })
   }
   checkIfSaved() {
-    const userId = localStorage.getItem('userId')
+    const userId = this.props.userId
     const homeId = this.props.listing.mlsId
     ref.once('value', (snapshot) => {
       if (snapshot.hasChild(`users/${userId}/homes/${homeId}`)) {
@@ -31,14 +31,14 @@ class HomeContainer extends Component {
     })
   }
   saveListing() {
-    const userId = localStorage.getItem('userId')
+    const userId = this.props.userId
     const homeId = this.props.listing.mlsId
     ref.child(`users/${userId}/homes/${homeId}`)
       .set(this.props.listing)
       .then(() => this.setState({ isSaved: true }))
   }
   render() {
-    return <Home {...this.state} {...this.props} saveListing={this.saveListing} />
+    return <Home {...this.state} listing={this.props.listing} saveListing={this.saveListing} />
   }
 }
 

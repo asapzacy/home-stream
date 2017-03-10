@@ -9,11 +9,11 @@ import { getLocationProps, getPriceProps, getDetailsProps, getMlsProps } from '.
 export default function Info({ listing , isSaved, saveListing }) {
   return (
     <main className='infoContainer'>
-      <Location {...getLocationProps(listing)} />
-      <Price {...getPriceProps(listing)} />
-      <Details {...getDetailsProps(listing)} />
+      <Location {...getLocationProps(listing.address)} />
+      <Price {...getPriceProps(listing.listPrice)} />
+      <Details {...getDetailsProps(listing.property)} />
       <footer className='footerContainer'>
-        <Mls {...getMlsProps(listing)} isSaved={isSaved} saveListing={saveListing} />
+        <Mls {...getMlsProps(listing.listDate, listing.mlsId)} />
         <Save isSaved={isSaved} saveListing={saveListing} />
       </footer>
     </main>

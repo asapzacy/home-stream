@@ -24,7 +24,6 @@
 /* -------  main container  ------- */
 .mainContainer {
   width:96%;
-  height:100%;
   max-width:1600px;
   margin:0 auto 3em;
 }
@@ -36,7 +35,6 @@
   justify-content:center;
   flex-wrap:wrap;
 }
-
 
 /* -------  home item  ------- */
 .homeItem {
@@ -50,7 +48,6 @@
   min-width:333px;
 }
 
-
 /* -------  image container  ------- */
 .imageContainer {
   flex:1;
@@ -61,16 +58,14 @@
   background:#ddd;
   display:flex;
 }
-.imageCaption {
+/* -------  caption  ------- */
+.caption {
   width:100%;
   background-color:rgba(255,255,255,0.7);
   position:absolute;
-  bottom:0;
-  right:0;
-  left:0;
+  bottom:0;right:0;left:0;
   padding:0.2em 0.4em;
 }
-
 
 /* -------  info container  ------- */
 .infoContainer {
@@ -85,42 +80,47 @@
   text-align:center;
 }
 
-
 /* -------  location container  ------- */
 .locationContainer {
   text-align:center;
 }
-.street {
+/* -------  location container h1  ------- */
+.locationContainer h1 {
   font-size:1.2em;
 }
-.region {
+/* -------  location container h2  ------- */
+.locationContainer h2 {
   font-size:1.05em;
 }
 
-
+/* -------  price container  ------- */
 .priceContainer {
   font-weight:500;
   font-size:2em;
 }
 
+/* -------  details container  ------- */
 .detailsContainer {
   width:100%
 }
+/* -------  details list  ------- */
 .detailsList {
   display:flex;
   justify-content:space-around;
 }
+/* -------  details item  ------- */
 .detailsItem {
   font-size:0.8em;
 }
+/* -------  details item span  ------- */
 .detailsItem span {
   font-size:150%;
   display:block;
   font-weight:400;
 }
-.detailsItem:not(:last-child) {
-}
 
+
+/* -------  footer container  ------- */
 .footerContainer {
   width:90%;
   margin:0 auto;
@@ -130,14 +130,16 @@
   align-items:center;
 }
 
-
-.mlsData {
+/* -------  mls container  ------- */
+.mlsContainer {
   font-size:0.8em;
 }
+/* -------  bullet  ------- */
 .bullet {
   margin:0 1em;
 }
 
+/* -------  save btn  ------- */
 .saveBtn {
   font-size:1em;
   line-height:1;
@@ -145,63 +147,54 @@
   width:2em;
   transition:0.44s color 0.44s;
 }
-.saveIcon {
-  padding:1% 2%;
-}
+/* -------  saved  ------- */
 .saved {
   color:#008000;
 }
 
 
-
-
-/* -------  loading container  ------- */
-.loadingContainer {
-
+/* -------  other container  ------- */
+.otherContainer {
+  height:20em;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 /* -------  svg container  ------- */
 .svgContainer {
   position:relative;
-  width:70px;
+  width:90px;
   margin:0 auto;
 }
-
  /* -------  svg container - ::after  ------- */
 .svgContainer::before {
   content:'';
   display:block;
   padding-top:100%;
 }
-
 /* -------  svg  ------- */
 .svg {
   width:100%;
   height:100%;
   position:absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
+  top:0;bottom:0;left:0;right:0;
   margin:auto;
   transform-origin:center center;
   animation:rotate 2s linear infinite;
  }
-
- /* -------  svg path  ------- */
-.svgPath {
+ /* -------  citcle  ------- */
+.circle {
   stroke:#070707;
   stroke-dasharray:1,200;
   stroke-dashoffset:0;
   stroke-linecap:round;
   animation:dash 1.5s ease-in-out infinite;
 }
-
 /* -------  keyframes - rotate  ------- */
 @keyframes rotate {
   100% { transform:rotate(360deg) }
 }
-
 /* -------  keyframes - dash  ------- */
 @keyframes dash {
   0% {
@@ -216,11 +209,4 @@
     stroke-dasharray:89,200;
     stroke-dashoffset:-124px;
   }
-}
-
-@media only screen and (min-width:667px) {
-  .svgContainer {
-    width:90px
-  }
-
 }

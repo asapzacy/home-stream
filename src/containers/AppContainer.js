@@ -9,19 +9,11 @@ class AppContainer extends Component {
     this.state = { userId: 0 }
   }
   componentDidMount() {
-    this.createUserId()
-  }
-  createUserId() {
-    const id = Math.floor(Math.random() * 1000000000)
-    this.setState({ userId: id }, () => {
-      this.setUserId()
-    })
+    this.setUserId()
   }
   setUserId() {
-    if (!localStorage.getItem('userId')) {
-      localStorage.setItem('userId', this.state.userId)
-    }
-    console.log(localStorage['firebase:previous_websocket_failure'])
+    const id = localStorage.getItem('userId') || Math.floor(Math.random() * 1000000000)
+    this.setState({ userId: id })
   }
   render() {
     return (
