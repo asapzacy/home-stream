@@ -1,6 +1,7 @@
 
 /* -------  app container  ------- */
 .appContainer {
+  height:100%;
   display:flex;
   align-items:center;
   flex-direction:column;
@@ -11,8 +12,7 @@
 .headerContainer {
   width:100%;
   margin:1.5em 0;
-  display:flex;
-  justify-content:center;
+  text-align:center;
 }
 /* -------  header  ------- */
 .header {
@@ -121,7 +121,7 @@
 .detailsItem:not(:last-child) {
 }
 
-.mlsContainer {
+.footerContainer {
   width:90%;
   margin:0 auto;
   line-height:1;
@@ -129,6 +129,8 @@
   justify-content:space-between;
   align-items:center;
 }
+
+
 .mlsData {
   font-size:0.8em;
 }
@@ -141,7 +143,7 @@
   line-height:1;
   height:2em;
   width:2em;
-  transition:transform 0.44s;
+  transition:0.44s color 0.44s;
 }
 .saveIcon {
   padding:1% 2%;
@@ -149,9 +151,7 @@
 .saved {
   color:#008000;
 }
-.saveBtn:not(.saved):hover {
-  transform:scale(1.1);
-}
+
 
 
 

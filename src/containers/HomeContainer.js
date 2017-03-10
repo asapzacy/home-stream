@@ -24,7 +24,6 @@ class HomeContainer extends Component {
   checkIfSaved() {
     const userId = localStorage.getItem('userId')
     const homeId = this.props.listing.mlsId
-    console.log(homeId, userId)
     ref.once('value', (snapshot) => {
       if (snapshot.hasChild(`users/${userId}/homes/${homeId}`)) {
         this.setState({ isSaved: true })

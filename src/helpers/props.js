@@ -23,6 +23,6 @@ export const getDetailsProps = (data) => ({
 })
 
 export const getMlsProps = (data) => ({
-  date: data.listDate,
+  date: `${data.listDate.slice(5,7)}/${data.listDate.slice(8,10)}/${data.listDate.slice(0,4)}`,
   id: `#${data.mlsId}`
 })

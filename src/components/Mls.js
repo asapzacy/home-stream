@@ -2,8 +2,7 @@ import React from 'react'
 import Save from './Save'
 import { formatDate } from '../helpers/utils'
 
-export default function Mls({ date, id, isSaved, saveListing }) {
-  localStorage.getItem('userId') ? console.log('yess') : console.log('noo')
+export default function Mls({ date, id }) {
   return (
     <section className='mlsContainer'>
       <div className='mlsData'>
@@ -11,7 +10,6 @@ export default function Mls({ date, id, isSaved, saveListing }) {
         <span className='bullet'>•</span>
         <span>{id}</span>
       </div>
-      <Save isSaved={isSaved} saveListing={saveListing} />
     </section>
   )
 }
