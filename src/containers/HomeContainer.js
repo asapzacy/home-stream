@@ -35,7 +35,10 @@ class HomeContainer extends Component {
     const homeId = this.props.listing.mlsId
     ref.child(`users/${userId}/homes/${homeId}`)
       .set(this.props.listing)
-      .then(() => this.setState({ isSaved: true }))
+      .then(() => {
+        this.setState({ isSaved: true })
+        console.log('home listing saved to firebase. . . ')
+      })
   }
   render() {
     return <Home {...this.state} listing={this.props.listing} saveListing={this.saveListing} />
