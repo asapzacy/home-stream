@@ -1,11 +1,12 @@
 import React from 'react'
-import Figure from './Figure'
+import Image from './Image'
 import Info from './Info'
+import { getImageProps, getInfoProps } from '../helpers/utils'
 
-export default function Home({ image, address }) {
+export default function Home({ listing }) {
   return (
     <li className='homeItem'>
-      <Figure image={image} address={address} />
+      <Image {...getImageProps(listing)} />
       <Info />
     </li>
   )

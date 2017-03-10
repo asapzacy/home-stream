@@ -15,7 +15,6 @@
   align-items:center;
   justify-content:center;
 }
-
 /* -------  header  ------- */
 .header {
   font-family:monospace;
@@ -29,7 +28,6 @@
   height:100%;
   max-width:1444px;
   margin:0 auto;
-
 }
 
 
@@ -40,29 +38,45 @@
   flex-wrap:wrap;
 }
 
+
 /* -------  home item  ------- */
 .homeItem {
   margin:1em;
-  padding:0.5%;
   border:2px solid #070707;
   background:#fff;
-  flex:1 1 calc(320px - 2em);
-  min-width:320px;
-  max-width:420px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex:1 1 calc(50% - 2em);
 }
+
 
 /* -------  image container  ------- */
-.figureContainer {
-  min-height:333px;
+.imageContainer {
+  flex:1;
+  position:relative;
 }
-
-.figureImage {
+/* -------  image  ------- */
+.image {
   background:#ddd;
+  display:flex;
+}
+.imageCaption {
+  width:100%;
+  background-color:rgba(255,255,255,0.7);
+  position:absolute;
+  bottom:0;
+  right:0;
+  left:0;
+  padding:0.2em 0.4em;
 }
 
 
 
-
+/* -------  info container  ------- */
+.infoContainer {
+  flex:1;
+}
 
 
 
