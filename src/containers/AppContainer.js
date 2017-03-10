@@ -1,24 +1,34 @@
 import React, { Component } from 'react'
 import Header from '../components/Header'
-import { getHomeStream } from '../helpers/api.js'
+import Stream from '../components/Stream'
+import Loading from '../components/Loading'
+import { getHomeStream } from '../helpers/api'
 import '../styles/main.css'
 
 class AppContainer extends Component {
   constructor() {
     super()
     this.state = {
-      data: {}
+      userId: 0,
+      listings: [],
+      isLoading: true,
+      isError: false
     }
   }
   componentDidMount() {
+    this.createUserId()
     this.makeRequest()
+  }
+  createUserId() {
+    const id = Math.floor(Math.random() * 1000000)
+    this.setState({ userId: id })
   }
   makeRequest() {
     getHomeStream()
       .then((data) => {
-        console.log(data)
         this.setState({
-          data
+          listings: data,
+          isLoading: false
         })
       })
       .catch((error) => console.log(error))
@@ -27,6 +37,9 @@ class AppContainer extends Component {
     return (
       <div className='appContainer'>
         <Header />
+        <main className='mainContainer'>
+          { this.state.loading ? <Loading /> : <Stream listings={this.state.listings} /> }
+        </main>
       </div>
     )
   }

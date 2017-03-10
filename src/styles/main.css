@@ -1,10 +1,6 @@
 
 /* -------  app container  ------- */
 .appContainer {
-  width:96%;
-  height:100%;
-  max-width:1444px;
-  margin:0 auto;
   display:flex;
   align-items:center;
   flex-direction:column;
@@ -27,80 +23,125 @@
 }
 
 
-/* -------  bullet list  ------- */
-.bulletList {
-  width:100%;
-  flex-basis:50%;
+/* -------  main container  ------- */
+.mainContainer {
+  width:96%;
+  height:100%;
+  max-width:1444px;
+  margin:0 auto;
+
+}
+
+
+/* -------  homes list  ------- */
+.homesList {
   display:flex;
-  flex-direction:column;
-  justify-content:space-around;
-}
-
-
-/* -------  bullet  ------- */
-.bullet {
-  display:flex;
-  justify-content:space-between;
-}
-
-
-/* -------  title container  ------- */
-.titleContainer {
-  flex-basis:14%;
-  min-width:160px;
-  text-align:right;
-}
-/* -------  title  ------- */
-.title {
-  font-weight:600;
-  font-size:1.2em;
-}
-/* -------  subtitle  ------- */
-.subtitle {
-  font-size:1em;
-}
-
-
-/* -------  graph container  ------- */
-.graphContainer {
-  flex-basis:84%;
-  padding:0 2%;
-}
-
-/* -------  graph  ------- */
-.graph {
-  overflow:visible;
-}
-
-
-/* -------  bar  ------- */
-.bar {
-  transition:fill 0.44s;
-}
-
-
-/* -------  color menu  ------- */
-.colorMenu {
-  width:100%;
-  flex-basis:25%;
-  display:flex;
-  align-items:center;
   justify-content:center;
+  flex-wrap:wrap;
 }
 
-/* -------  color list  ------- */
-.colorList {
-  display:flex;
+/* -------  home item  ------- */
+.homeItem {
+  margin:1em;
+  padding:0.5%;
+  border:2px solid #070707;
+  background:#fff;
+  flex:1 1 calc(320px - 2em);
+  min-width:320px;
+  max-width:420px;
 }
 
-/* -------  color item  ------- */
-.colorItem {
-  padding:0 2em;
-  cursor:pointer;
-  transition:color 0.44s;
+/* -------  image container  ------- */
+.figureContainer {
+  min-height:333px;
 }
 
-/* -------  color item - not last child  ------- */
-.colorItem:not(:last-child) {
-  border-right:1px solid #070707;
+.figureImage {
+  background:#ddd;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------  loading container  ------- */
+.loadingContainer {
+
+}
+
+/* -------  svg container  ------- */
+.svgContainer {
+  position:relative;
+  width:70px;
+  margin:0 auto;
+}
+
+ /* -------  svg container - ::after  ------- */
+.svgContainer::before {
+  content:'';
+  display:block;
+  padding-top:100%;
+}
+
+/* -------  svg  ------- */
+.svg {
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+  transform-origin:center center;
+  animation:rotate 2s linear infinite;
+ }
+
+ /* -------  svg path  ------- */
+.svgPath {
+  stroke:#070707;
+  stroke-dasharray:1,200;
+  stroke-dashoffset:0;
+  stroke-linecap:round;
+  animation:dash 1.5s ease-in-out infinite;
+}
+
+/* -------  keyframes - rotate  ------- */
+@keyframes rotate {
+  100% { transform:rotate(360deg) }
+}
+
+/* -------  keyframes - dash  ------- */
+@keyframes dash {
+  0% {
+    stroke-dasharray:1,200;
+    stroke-dashoffset:0;
+  }
+  50% {
+    stroke-dasharray:89,200;
+    stroke-dashoffset:-35px;
+  }
+  100% {
+    stroke-dasharray:89,200;
+    stroke-dashoffset:-124px;
+  }
+}
+
+@media only screen and (min-width:667px) {
+  .svgContainer {
+    width:90px
+  }
+
 }
