@@ -26,7 +26,7 @@
 .mainContainer {
   width:96%;
   height:100%;
-  max-width:1444px;
+  max-width:1600px;
   margin:0 auto;
 }
 
@@ -41,13 +41,14 @@
 
 /* -------  home item  ------- */
 .homeItem {
-  margin:1em;
+  margin:1.25em;
   border:2px solid #070707;
   background:#fff;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  flex:1 1 calc(50% - 2em);
+  flex:1 1 calc(50% - 2.5em);
+  min-width:333px;
 }
 
 
@@ -72,18 +73,62 @@
 }
 
 
-
 /* -------  info container  ------- */
 .infoContainer {
   flex:1;
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  align-items:center;
+  justify-content:space-between;
+  padding:2.4% 0.6% 1.2%;
+  font-size:100%;
+  text-align:center;
 }
 
 
+/* -------  location container  ------- */
+.locationContainer {
+  text-align:center;
+}
+.street {
+  font-size:1.2em;
+}
+.region {
+  font-size:1.05em;
+}
 
 
+.priceContainer {
+  font-weight:500;
+  font-size:2em;
+}
 
+.detailsContainer {
+  width:100%
+}
+.detailsList {
+  display:flex;
+  justify-content:space-around;
+}
+.detailsItem {
+  font-size:0.8em;
+}
+.detailsItem span {
+  font-size:150%;
+  display:block;
+  font-weight:400;
+}
+.detailsItem:not(:last-child) {
+}
 
-
+.mlsContainer {
+  display:flex;
+  font-size:80%;
+}
+.mlsDivider {
+  margin:0 1em;
+}
 
 
 

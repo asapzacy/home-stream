@@ -1,9 +1,18 @@
 import React from 'react'
+import Location from './Location'
+import Price from './Price'
+import Details from './Details'
+import Mls from './Mls'
+import { getLocationProps, getPriceProps, getDetailsProps, getMlsProps } from '../helpers/props'
 
-export default function Info() {
+export default function Info({ listing }) {
+  console.log(listing)
   return (
-    <section className='infoContainer'>
-      <h1>info</h1>
-    </section>
+    <main className='infoContainer'>
+      <Location {...getLocationProps(listing)} />
+      <Price {...getPriceProps(listing)} />
+      <Details {...getDetailsProps(listing)} />
+      <Mls {...getMlsProps(listing)} />
+    </main>
   )
 }
