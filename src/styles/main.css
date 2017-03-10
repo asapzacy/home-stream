@@ -139,6 +139,9 @@
 .saveBtn {
   font-size:1em;
   line-height:1;
+  height:2em;
+  width:2em;
+  transition:transform 0.44s;
 }
 .saveIcon {
   padding:1% 2%;
@@ -146,7 +149,9 @@
 .saved {
   color:#008000;
 }
-
+.saveBtn:not(.saved):hover {
+  transform:scale(1.1);
+}
 
 
 

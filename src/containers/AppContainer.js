@@ -1,23 +1,15 @@
 import React, { Component } from 'react'
 import Header from '../components/Header'
-import Stream from '../components/Stream'
-import Loading from '../components/Loading'
-import { getHomeStream } from '../helpers/api'
+import StreamContainer from './StreamContainer'
 import '../styles/main.css'
 
 class AppContainer extends Component {
   constructor() {
     super()
-    this.state = {
-      userId: 0,
-      listings: [],
-      isLoading: true,
-      isError: false
-    }
+    this.state = { userId: 0 }
   }
   componentDidMount() {
     this.createUserId()
-    this.makeRequest()
   }
   createUserId() {
     const id = Math.floor(Math.random() * 1000000000)
@@ -27,26 +19,15 @@ class AppContainer extends Component {
   }
   setUserId() {
     if (!localStorage.getItem('userId')) {
-      localStorage.setItem('id', this.state.userId)
+      localStorage.setItem('userId', this.state.userId)
     }
-  }
-  makeRequest() {
-    getHomeStream()
-      .then((data) => {
-        this.setState({
-          listings: data,
-          isLoading: false
-        })
-      })
-      .catch((error) => console.log(error))
+    console.log(localStorage['firebase:previous_websocket_failure'])
   }
   render() {
     return (
       <div className='appContainer'>
         <Header />
-        <main className='mainContainer'>
-          { this.state.loading ? <Loading /> : <Stream listings={this.state.listings} /> }
-        </main>
+        <StreamContainer {...this.state} />
       </div>
     )
   }

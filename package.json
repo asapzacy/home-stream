@@ -12,11 +12,14 @@
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "gh-pages": "^0.12.0",
     "react-scripts": "0.8.5"
   },
   "dependencies": {
     "axios": "^0.15.3",
+    "firebase": "^3.7.1",
     "moment": "^2.17.1",
+    "re-base": "^2.6.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-icons": "^2.2.3"

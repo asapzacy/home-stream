@@ -1,6 +1,6 @@
 
-export const getImageProps = (data, random) => ({
-  image: data.photos[random],
+export const getImageProps = (data, photo) => ({
+  image: data.photos[photo],
   caption: `${data.mls.area} — ${data.address.city}, ${data.address.state}`,
   address: data.address.full
 })
