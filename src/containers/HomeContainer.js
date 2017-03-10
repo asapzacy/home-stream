@@ -20,7 +20,6 @@ class HomeContainer extends Component {
     this.setState({ isSaved: true })
   }
   render() {
-    console.log('hi')
     return <Home {...this.state} {...this.props} saveListing={this.saveListing} />
   }
 }

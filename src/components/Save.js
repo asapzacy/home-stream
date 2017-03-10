@@ -5,7 +5,7 @@ import Check from 'react-icons/lib/md/check'
 
 export default function Save({ isSaved, saveListing }) {
   return (
-    <button onClick={saveListing} className='saveBtn'>
+    <button onClick={saveListing} className={'saveBtn' + (isSaved ? ' saved' : '')}>
       <span className='saveIcon'>{ isSaved ? <Check /> : <Add /> }</span>
     </button>
   )

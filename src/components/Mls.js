@@ -3,6 +3,7 @@ import Save from './Save'
 import { formatDate } from '../helpers/utils'
 
 export default function Mls({ date, id, isSaved, saveListing }) {
+  localStorage.getItem('userId') ? console.log('yess') : console.log('noo')
   return (
     <section className='mlsContainer'>
       <div className='mlsData'>

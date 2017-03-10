@@ -20,8 +20,15 @@ class AppContainer extends Component {
     this.makeRequest()
   }
   createUserId() {
-    const id = Math.floor(Math.random() * 1000000)
-    this.setState({ userId: id })
+    const id = Math.floor(Math.random() * 1000000000)
+    this.setState({ userId: id }, () => {
+      this.setUserId()
+    })
+  }
+  setUserId() {
+    if (!localStorage.getItem('userId')) {
+      localStorage.setItem('id', this.state.userId)
+    }
   }
   makeRequest() {
     getHomeStream()

@@ -10,6 +10,7 @@
 /* -------  header container  ------- */
 .headerContainer {
   width:100%;
+  margin:1.5em 0;
   display:flex;
   justify-content:center;
 }
@@ -25,7 +26,7 @@
   width:96%;
   height:100%;
   max-width:1600px;
-  margin:0 auto;
+  margin:0 auto 3em;
 }
 
 
@@ -141,6 +142,9 @@
 }
 .saveIcon {
   padding:1% 2%;
+}
+.saved {
+  color:#008000;
 }
 
 
