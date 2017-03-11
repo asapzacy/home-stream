@@ -72,12 +72,12 @@
 .infoContainer {
   display:flex;
   flex-direction:column;
-  height:100%;
   width:100%;
   align-items:center;
   justify-content:space-between;
   margin-top:1em;
   text-align:center;
+  padding:2.4% 0.6% 1.2%;
 }
 /* -------  info container section  ------- */
 .infoContainer section {
@@ -243,7 +243,6 @@
 
   /* -------  info container  ------- */
   .infoContainer {
-    padding:2.4% 0.6% 1.2%;
     margin-top:0;
     flex:1;
   }
