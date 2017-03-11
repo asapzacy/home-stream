@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Header from '../components/Header'
 import StreamContainer from './StreamContainer'
+import initReactFastclick from 'react-fastclick';
 import '../styles/main.css'
 
 class AppContainer extends Component {
@@ -10,6 +11,7 @@ class AppContainer extends Component {
   }
   componentDidMount() {
     this.setUserId()
+    initReactFastclick()
   }
   setUserId() {
     const id = localStorage.getItem('userId') || Math.floor(Math.random() * 1000000000)

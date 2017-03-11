@@ -3,7 +3,7 @@ export const config = {
   enter: {
     animation:'fadeIn',
     duration:440,
-    delay:440,
+    delay:240,
     display:'inline-block'
   },
   leave: {

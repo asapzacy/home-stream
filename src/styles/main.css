@@ -11,13 +11,13 @@
 /* -------  header container  ------- */
 .headerContainer {
   width:100%;
-  margin:1.5em 0;
+  margin:1em 0;
   text-align:center;
 }
 /* -------  header  ------- */
 .header {
   font-family:monospace;
-  font-size:3.33em;
+  font-size:2.22em;
 }
 
 
@@ -45,13 +45,13 @@
   display:flex;
   align-items:center;
   justify-content:space-between;
-  flex:1 1 calc(50% - 2.5em);
-  min-width:333px;
+  flex-direction:column;
+  flex:1 1 calc(100% - 2.5em);
 }
+
 
 /* -------  image container  ------- */
 .imageContainer {
-  flex:1;
   position:relative;
 }
 /* -------  image  ------- */
@@ -70,14 +70,18 @@
 
 /* -------  info container  ------- */
 .infoContainer {
-  flex:1;
   display:flex;
   flex-direction:column;
   height:100%;
+  width:100%;
   align-items:center;
   justify-content:space-between;
-  padding:2.4% 0.6% 1.2%;
+  margin-top:1em;
   text-align:center;
+}
+/* -------  info container section  ------- */
+.infoContainer section {
+  margin-bottom:0.4em;
 }
 
 
@@ -102,7 +106,7 @@
 
 /* -------  details container  ------- */
 .detailsContainer {
-  width:100%
+  width:80%
 }
 /* -------  details list  ------- */
 .detailsList {
@@ -124,7 +128,7 @@
 /* -------  footer container  ------- */
 .footerContainer {
   width:90%;
-  margin:0 auto;
+  margin:1em auto 0;
   line-height:1;
   display:flex;
   justify-content:space-between;
@@ -146,7 +150,7 @@
   line-height:1;
   height:2em;
   width:2em;
-  transition:0.44s color 0.44s;
+  transition:0.44s color 0.24s;
 }
 /* -------  saved  ------- */
 .saved {
@@ -210,4 +214,52 @@
     stroke-dasharray:89,200;
     stroke-dashoffset:-124px;
   }
+}
+
+/* -------  very basic responsive styling  ------- */
+@media only screen and (min-width:667px) {
+
+  /* -------  header container  ------- */
+  .headerContainer {
+    margin:1.5em 0;
+  }
+  /* -------  header  ------- */
+  .header {
+    font-size:3.33em;
+  }
+
+  /* -------  home item  ------- */
+  .homeItem {
+    flex-direction:row;
+    flex:1 1 calc(50% - 2.5em);
+    min-width:625px;
+    max-width:825px;
+  }
+
+  /* -------  image container  ------- */
+  .imageContainer {
+    flex:1;
+  }
+
+  /* -------  info container  ------- */
+  .infoContainer {
+    padding:2.4% 0.6% 1.2%;
+    margin-top:0;
+    flex:1;
+  }
+  /* -------  info container section  ------- */
+  .infoContainer section {
+    margin-bottom:0;
+  }
+
+  /* -------  details container  ------- */
+  .detailsContainer {
+    width:100%;
+  }
+
+  /* -------  footer container  ------- */
+  .footerContainer {
+    margin-top:0;
+  }
+
 }
