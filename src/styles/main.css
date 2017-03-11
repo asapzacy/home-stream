@@ -25,7 +25,7 @@
 .mainContainer {
   width:96%;
   max-width:1600px;
-  margin:0 auto 3em;
+  margin:0 auto;
 }
 
 
@@ -34,6 +34,7 @@
   display:flex;
   justify-content:center;
   flex-wrap:wrap;
+  margin-bottom:3em;
 }
 
 /* -------  home item  ------- */
@@ -76,9 +77,9 @@
   align-items:center;
   justify-content:space-between;
   padding:2.4% 0.6% 1.2%;
-  font-size:100%;
   text-align:center;
 }
+
 
 /* -------  location container  ------- */
 .locationContainer {
