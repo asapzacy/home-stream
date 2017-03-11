@@ -7,7 +7,7 @@ class HomeContainer extends Component {
     super()
     this.state = {
       isSaved: false,
-      photo: null
+      photo: 0
     }
     this.saveListing = this.saveListing.bind(this)
   }
@@ -35,10 +35,8 @@ class HomeContainer extends Component {
     const homeId = this.props.listing.mlsId
     ref.child(`users/${userId}/homes/${homeId}`)
       .set(this.props.listing)
-      .then(() => {
-        this.setState({ isSaved: true })
-        console.log('home listing saved to firebase. . . ')
-      })
+      .then(() => this.setState({ isSaved: true }))
+    console.log(`${this.props.listing.address.streetName} listing saved to firebase. . . `)
   }
   render() {
     return <Home {...this.state} listing={this.props.listing} saveListing={this.saveListing} />
