@@ -244,6 +244,7 @@
   /* -------  info container  ------- */
   .infoContainer {
     margin-top:0;
+    height:100%;
     flex:1;
   }
   /* -------  info container section  ------- */
