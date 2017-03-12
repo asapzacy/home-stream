@@ -12,9 +12,12 @@ class AppContainer extends Component {
     this.setUserId()
   }
   setUserId() {
-    const id = localStorage.getItem('userId') || Math.floor(Math.random() * 1000000000)
+    let id = localStorage.getItem('userId')
+    if (!id) {
+      id = Math.floor(Math.random() * 1000000000)
+      localStorage.setItem('userId', id)
+    }
     this.setState({ userId: id })
-    localStorage.setItem('userId', id)
   }
   render() {
     return (

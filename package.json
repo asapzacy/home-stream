@@ -1,6 +1,6 @@
 {
   "name": "home-stream",
-  "description": "A stream of home listings using the SimplyRETS API and React.js.",
+  "description": "A stream of home listings using the SimplyRETS API, React, Firebase, and localStorage.",
   "version": "0.1.0",
   "private": true,
   "scripts": {
