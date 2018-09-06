@@ -1,15 +1,13 @@
 # home-stream
 
-![home-stream preview](https://zac.codes/img/other/home-stream_preview.png)
+![home-stream preview](https://zac.codes/assets/img/projects/home-stream_preview-xlarge.jpg)
 
 A coding challenge to display a stream of home listings using the SimplyRETS API, React, Firebase, and localStorage.
 
 ## Usage
 ```
-git clone https://github.com/zacarellano/home-stream.git
-cd home-stream
-yarn
-yarn start
+git clone https://github.com/asapzacy/home-stream.git && cd home-stream
+yarn && yarn start
 ```
 
 then --> [localhost:3000](http://localhost:3000)
